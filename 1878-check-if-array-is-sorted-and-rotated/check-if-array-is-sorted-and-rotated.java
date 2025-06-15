@@ -1,20 +1,17 @@
 class Solution {
     public boolean check(int[] arr) {
-        String str="";
-
-        for(int i=0;i<arr.length;i++){
-             str+=String.valueOf(arr[i]);
-             str+='_';
-              
+        boolean flg=false;
+        for(int i=0;i<arr.length-1;i++){
+            if(arr[i]>arr[i+1]) {
+                if(flg)
+                    return false;
+                else
+                    flg=true;
+            }
         }
-        str+=str;
-        Arrays.sort(arr);
-        String str1="";
-         for(int i=0;i<arr.length;i++){
-             str1+=String.valueOf(arr[i]);
-             str1+='_';
-              
-        }
-        return str.contains(str1);
+           
+         if(flg)
+         return arr[arr.length-1]<=arr[0];
+         return true;
     }
 }
