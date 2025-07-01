@@ -1,19 +1,24 @@
 class Solution {
     public boolean isAnagram(String s, String t) {
-       HashMap<Character,Integer> map=new HashMap<>();
-    //    HashMap<Character,Integer> map1=new HashMap<>();
-    //    HashMap<Integer> map1=new HashMap<Integer>;
-    for (char ch : s.toCharArray()) { // For characters in a string
-        map.put(ch, map.getOrDefault(ch, 0) + 1);
-    }
-    for (char ch : t.toCharArray()) { // For characters in a string
-        map.put(ch, map.getOrDefault(ch, 0) - 1);
-    }
-    for(int  val : map.values()){
-        if(val!=0){
-            return false;
+        int[] count = new int[26];
+        
+        // Count the frequency of characters in string s
+        for (char x : s.toCharArray()) {
+            count[x - 'a']++;
         }
-    }
+        
+        // Decrement the frequency of characters in string t
+        for (char x : t.toCharArray()) {
+            count[x - 'a']--;
+        }
+        
+        // Check if any character has non-zero frequency
+        for (int val : count) {
+            if (val != 0) {
+                return false;
+            }
+        }
+        
         return true;
     }
 }
