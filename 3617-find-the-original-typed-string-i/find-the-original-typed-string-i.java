@@ -13,7 +13,7 @@ class Solution {
                 ans+=val;
             }
         }
-       System.out.print(Arrays.toString(fre));
+    //    System.out.print(Arrays.toString(fre));
         return ans;
     }
 }
