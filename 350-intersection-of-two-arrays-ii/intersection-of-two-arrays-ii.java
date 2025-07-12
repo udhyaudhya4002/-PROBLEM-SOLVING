@@ -3,7 +3,8 @@ class Solution {
           int j=0,i=0,k=0;
           Arrays.sort(nums1);
           Arrays.sort(nums2);
-          while(i<nums1.length && j<nums2.length){
+          int l1=nums1.length,l2=nums2.length;
+          while(i<l1 && j<l2){
             if(nums1[i] < nums2[j]){
                 i++;
             }
