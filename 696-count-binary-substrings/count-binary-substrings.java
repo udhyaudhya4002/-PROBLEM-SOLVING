@@ -2,8 +2,9 @@ class Solution {
     public int countBinarySubstrings(String s) {
         ArrayList<Integer> al=new ArrayList<Integer>();
         int cnt=1;
+        char[] ch=s.toCharArray();
         for(int i=0;i<s.length()-1;i++){
-              if(s.charAt(i)==s.charAt(i+1)){
+              if(ch[i]==ch[i+1]){
                 cnt++;
               }
               else{
