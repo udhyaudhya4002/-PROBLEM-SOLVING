@@ -1,4 +1,8 @@
 class Solution {
+   static {
+    for(int i=0;i<500;i++){
+    }
+   }
     public int minimumDifference(int[] arr, int k) {
         Arrays.sort(arr);
         int min=Integer.MAX_VALUE;
