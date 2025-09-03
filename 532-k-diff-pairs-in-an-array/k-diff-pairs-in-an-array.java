@@ -19,7 +19,7 @@ class Solution {
           else if(nums[r]-nums[l]<k){
             r++;
           }
-          else {
+          else if(nums[r]-nums[l]>k){
             l++;
           }
           if(l==r) r++;
