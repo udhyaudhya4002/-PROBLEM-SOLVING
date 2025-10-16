@@ -9,7 +9,7 @@ class Solution {
             char ch=s.charAt(i);
             int rev=26-(ch-'a'); 
             res+=rev*(i+1);
-            System.out.println(res);
+            // System.out.println(res);
         }
 
         return res;
