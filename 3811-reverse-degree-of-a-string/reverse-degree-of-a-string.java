@@ -1,11 +1,17 @@
 class Solution {
     public int reverseDegree(String s) {
-       int res = 0;
-        for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
-            int reverseValue = 26 - (ch - 'a'); // position in reversed alphabet
-            res += reverseValue * (i + 1);      // multiply by 1-indexed position
+        int fre[]=new int[26];
+        for(char ch: s.toCharArray()){
+           fre[ch-'a']++;
         }
+        int res=0,itr=1;
+        for(int i=0;i<s.length();i++){
+            char ch=s.charAt(i);
+            int rev=26-(ch-'a'); 
+            res+=rev*(i+1);
+            System.out.println(res);
+        }
+
         return res;
     }
 }
